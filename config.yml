@@ -1,0 +1,12 @@
+port: 8080
+cert_file: "cert.pem"
+key_file: "key.pem"
+tls_enabled: false
+selection_algorithm: "round_robin"
+
+backends:
+  - url: "http://localhost:8081"
+  - url: "http://localhost:8082"
+  - url: "http://localhost:8083"
+
+health_check_interval_seconds: 10
